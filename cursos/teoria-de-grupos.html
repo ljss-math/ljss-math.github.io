@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teoría de grupos</title>
+<meta name="description" content="Curso de introducción a la teoría de grupos con notas, cuestionarios, videos y ejercicios: de las permutaciones a los teoremas de Sylow. Facultad de Ciencias, UNAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta property="og:title" content="Teoría de grupos">
+<meta property="og:description" content="Curso de introducción a la teoría de grupos con notas, cuestionarios, videos y ejercicios: de las permutaciones a los teoremas de Sylow. Facultad de Ciencias, UNAM.">
+<meta property="og:image" content="https://ljss-math.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://ljss-math.github.io/cursos/teoria-de-grupos.html">
+<link rel="canonical" href="https://ljss-math.github.io/cursos/teoria-de-grupos.html">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: course syllabus; sticky unit index on the left, topics with their resources on the right */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#17202b; --muted:#5b6675; --line:#d9dee6;
+  --accent:#2c4a9a; --accent-soft:#e6ebf7; --ok:#2f6b4f; --ok-soft:#e3f0e9;
+  --display:"Spectral", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141b; --surface:#161d26; --fg:#e3e8ef; --muted:#9aa5b4; --line:#2a3441;
+  --accent:#93acf0; --accent-soft:#1e2a44; --ok:#7cc4a0; --ok-soft:#173026; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141b; --surface:#161d26; --fg:#e3e8ef; --muted:#9aa5b4; --line:#2a3441;
+  --accent:#93acf0; --accent-soft:#1e2a44; --ok:#7cc4a0; --ok-soft:#173026; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--accent);text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px}
+.top a{font-family:var(--display);font-weight:600;color:var(--fg);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.top a:hover{color:var(--accent)}
+.top .prog{margin-left:auto;font:12px var(--mono);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+header .wrap{padding-block:44px 30px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:600 clamp(30px,4.6vw,44px)/1.1 var(--display);margin:12px 0 12px;text-wrap:balance;letter-spacing:-.01em}
+.intro{max-width:65ch;color:var(--muted);margin:0 0 14px;font-size:17px}
+.stats{font:13px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+
+.meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding-block:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.meta h3,.toc h3{font:600 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.meta ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.meta .bk{font-family:var(--display);font-style:italic;font-size:17px}
+.meta small{color:var(--muted);font-size:14px}
+
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:44px;padding-block:32px 60px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 64px);align-self:start}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.toc a{display:grid;grid-template-columns:22px minmax(0,1fr);gap:6px;padding:7px 8px;border-radius:6px;color:var(--fg);text-decoration:none;font-size:14px;line-height:1.35}
+.toc a:hover{background:var(--accent-soft)}
+.toc .n{font:12px/1.6 var(--mono);color:var(--muted)}
+.toc .bar{grid-column:2;height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin-top:5px}
+.toc .bar i{display:block;height:100%;background:var(--ok);width:0}
+.toc .reset{margin-top:14px;font:12px var(--mono);color:var(--muted);background:none;border:0;padding:4px 8px;cursor:pointer}
+.toc .reset:hover{color:var(--accent)}
+
+.unit{scroll-margin-top:72px}
+.unit + .unit{margin-top:44px}
+.uh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:10px;border-bottom:2px solid var(--fg)}
+.uh .num{font:500 13px var(--mono);color:var(--muted)}
+.uh h2{font:600 26px/1.2 var(--display);margin:0}
+.uh .cnt{margin-left:auto;font:12px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.topics{list-style:none;margin:0;padding:0}
+.topic{display:grid;grid-template-columns:24px 42px minmax(0,1fr);gap:10px;padding:13px 0;border-bottom:1px solid var(--line);align-items:start}
+.topic input{margin:4px 0 0;width:17px;height:17px;accent-color:var(--ok);cursor:pointer}
+.topic .no{font:13px/1.9 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.topic .t{font-size:16.5px;font-weight:500;margin:0 0 6px;line-height:1.4}
+.topic.done .t{color:var(--muted)}
+.res{display:flex;flex-wrap:wrap;gap:6px}
+.r{display:inline-flex;align-items:center;gap:5px;font:500 12.5px/1 var(--body);padding:6px 9px;border-radius:5px;border:1px solid var(--line);background:var(--surface);color:var(--fg);text-decoration:none}
+.r:hover{border-color:var(--accent);color:var(--accent)}
+.r.vid::before{content:"";width:0;height:0;border-left:7px solid currentColor;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;opacity:.7}
+.r.note{background:var(--accent-soft);border-color:transparent}
+.r.pend{color:var(--muted);border-style:dashed;background:none}
+.ufoot{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:14px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:8px;font-size:14px}
+.ufoot b{font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+header .wrap{position:relative}
+header .wrap > :not(canvas){position:relative;z-index:1}
+#bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.intro,.stats{max-width:60ch}
+.poster{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px;aspect-ratio:16/7;max-width:100%;margin:0 0 30px;padding:28px clamp(20px,4vw,48px);border-radius:12px;text-decoration:none;color:var(--fg);overflow:hidden;
+  background:repeating-radial-gradient(circle at 12% 50%,transparent 0 22px,var(--line) 22px 23px),var(--surface);border:1px solid var(--line)}
+.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 20%,var(--surface) 60%);z-index:0}
+.poster > *{position:relative;z-index:1}
+.poster .play{width:clamp(64px,9vw,96px);height:clamp(64px,9vw,96px);border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:transform .2s}
+.poster .play::before{content:"";margin-left:8%;border-left:clamp(20px,2.8vw,30px) solid var(--bg);border-top:clamp(12px,1.7vw,18px) solid transparent;border-bottom:clamp(12px,1.7vw,18px) solid transparent}
+.poster:hover .play{transform:scale(1.06)}
+@media (prefers-reduced-motion:reduce){.poster .play{transition:none}}
+.poster .k{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.poster .pt{font:600 clamp(24px,3.6vw,38px)/1.15 var(--display);margin:10px 0 8px;text-wrap:balance}
+.poster .ps{color:var(--muted);margin:0;max-width:44ch}
+.poster .yt{font:12px var(--mono);color:var(--muted);margin-top:12px;display:block}
+@media (max-width:640px){.poster{grid-template-columns:1fr;aspect-ratio:auto;gap:16px}}
+.vhead{margin:0 0 14px}.vhead .k{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}.vhead .pt{font:600 clamp(24px,3.4vw,34px)/1.15 var(--display);margin:8px 0 6px}.vhead .ps{color:var(--muted);margin:0}.video{aspect-ratio:16/9;max-width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000;margin:0 0 30px}.video iframe{width:100%;height:100%;border:0;display:block}
+footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);font-size:13px}
+
+@media (max-width:820px){
+  .layout{grid-template-columns:1fr;gap:20px;padding-top:20px}
+  .toc{position:static}
+  .toc ol{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .meta{grid-template-columns:1fr}
+  .topic{grid-template-columns:22px minmax(0,1fr)}
+  .topic .no{display:none}
+}
+</style>
+
+<div class="top"><div class="wrap">
+  <a href="../">← Luis Jorge Sánchez Saldaña</a>
+  <span class="prog" id="prog"></span>
+</div></div>
+
+<header><div class="wrap"><canvas id="bg" aria-hidden="true"></canvas>
+  <div class="eyebrow">Curso · Facultad de Ciencias, UNAM</div>
+  <h1>Introducción a la teoría de grupos</h1>
+  <p class="intro">Cada tema tiene notas, un cuestionario de autoevaluación, videos y un video complementario. Al final de cada unidad hay un cuestionario de repaso y una lista de ejercicios de práctica.</p>
+  <div class="stats">5 unidades · 28 temas · 65 videos</div>
+</div></header>
+
+<div class="wrap" id="hero"></div>
+<div class="wrap"><div class="meta" id="meta"></div></div>
+
+<div class="wrap"><div class="layout">
+  <nav class="toc" aria-label="Unidades"><h3>Unidades</h3><ol id="toc"></ol>
+    <button class="reset" id="reset" type="button">Desmarcar todo</button></nav>
+  <main id="units"></main>
+</div></div>
+
+<footer><div class="wrap">Luis Jorge Sánchez Saldaña · Departamento de Matemáticas, Facultad de Ciencias, UNAM. Marca los temas que ya viste; tu avance se guarda solo en este navegador.</div></footer>
+
+<script>
+const C={"key": "tg", "title": "Introducción a la teoría de grupos", "short": "Teoría de grupos", "intro": "Cada tema tiene notas, un cuestionario de autoevaluación, videos y un video complementario. Al final de cada unidad hay un cuestionario de repaso y una lista de ejercicios de práctica.", "biblio": [{"a": "Joseph J. Rotman", "b": "An Introduction to the Theory of Groups"}], "bg": "s3", "hero": {"video": "https://www.youtube.com/watch?v=KZdsLFQv7iM", "kicker": "Empieza aquí", "title": "Presentación del curso", "sub": "Cómo está organizado el curso y cómo usar las notas, los videos y los cuestionarios."}, "credits": [["Notas y videos complementarios", "Daniel Guardado Cabral"], ["Cuestionarios", "Víctor Eduardo San Martín Macías"], ["Videos", "Luis Jorge Sánchez Saldaña"]], "units": [{"name": "Permutaciones", "quiz": ["https://forms.gle/vAvSjx85pKrv3a5F8"], "practice": "https://www.overleaf.com/read/rdrgrtwzxtzs", "items": [{"t": "Permutaciones", "notes": ["https://drive.google.com/file/d/11A_CxKLDf9DOJvlWNvqsG-xR_m4mQefO/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSfOn7x_jXVy-IVQTblSsiuSuc69OyvQcQVu6TJOhZJzD0PBSQ/viewform", "videos": ["https://www.youtube.com/watch?v=jv_SDsUl5Ww", "https://www.youtube.com/watch?v=m87e0HbDPEc"], "extra": ["https://drive.google.com/file/d/1IMPwBSi_jZiBr_fcOQ__DHmKYl9jhhS9/view?usp=sharing"], "pending": false}, {"t": "Ciclos", "notes": ["https://drive.google.com/file/d/1Z1sRPIzSooSmdDl2okp0zXaKPyc9iGWR/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdNiEUzKOSZNcbIEgCQIxNva-duArnBJbdM4mPLFWIGQXxNTQ/viewform", "videos": ["https://www.youtube.com/watch?v=NUvm3xt24IY", "https://www.youtube.com/watch?v=kt_wYcv-0TE"], "extra": ["https://drive.google.com/file/d/1pYLUvSlzaC6fvun2C3IOOFoqwR6nH3EU/view?usp=sharing"], "pending": false}, {"t": "Factorización en ciclos disjuntos", "notes": ["https://drive.google.com/file/d/1dFa_LX94lTN13R_XtbZoEZr11tDWx0Bf/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSef46UQefFYyT4CfhKP-f3hz7f6jh2zwXs0RvC9IM29CZP9Yw/viewform", "videos": ["https://www.youtube.com/watch?v=ThIxDzu927s", "https://www.youtube.com/watch?v=YURs3HUa4rI", "https://www.youtube.com/watch?v=eKiqBTPjCE8"], "extra": ["https://drive.google.com/file/d/1BbdLX3YSubod2L0scS1ZXzm4thpzI7L1/view?usp=sharing"], "pending": false}, {"t": "Permutaciones pares e impares", "notes": ["https://drive.google.com/file/d/1xer439xUIjqz-GDLkVMpWCPAp9SniAfG/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSdjYud8Wc182-SvimbV2_xyXDCspgCAzksPpf-cIaHdwH3kPg/viewform", "videos": ["https://www.youtube.com/watch?v=9glWsKaotog", "https://www.youtube.com/watch?v=D_16xzYcpVI", "https://www.youtube.com/watch?v=oyGk8h2lkZc", "https://www.youtube.com/watch?v=-rYk43dWuT8", "https://www.youtube.com/watch?v=RNZLT5kp5cU"], "extra": ["https://drive.google.com/file/d/1d0ByqSO6ATbFumFzgk37JHaENRUygatG/view?usp=sharing"], "pending": false}]}, {"name": "Grupos", "quiz": ["https://forms.gle/DAnpZd5Vssz39MaZ6"], "practice": "https://www.overleaf.com/read/smdxqqwtzqsk", "items": [{"t": "Definición de grupo", "notes": ["https://drive.google.com/file/d/1_1HMIent-7NpMNIEhEG2hZ2NXai394Qt/view?usp=sharing", "https://drive.google.com/file/d/1RDsMVnLIAHnH0EugEPBaajyqatw4c_TA/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSeKTwkP1-DsQ1g0FZ5rFFlRZy-CEE5es9bQclXXflbdoIjzKA/viewform", "videos": ["https://www.youtube.com/watch?v=kXstD-Uy3zI", "https://www.youtube.com/watch?v=ykIvLSgIF4o", "https://www.youtube.com/watch?v=j4O3SIWbk3s", "https://www.youtube.com/watch?v=9pQXv_8avfQ", "https://www.youtube.com/watch?v=2hQGsXBVz0Y"], "extra": ["https://drive.google.com/file/d/1lE9N3xAAV1rroEiAeO-sFngx-pn7N6xA/view?usp=sharing", "https://drive.google.com/file/d/1gjy9Mh9gCsGNoyCmXTIwwg7vBYxVcX_8/view?usp=sharing"], "pending": false}, {"t": "Homomorfismos", "notes": ["https://drive.google.com/file/d/1Dpk7zLahcP26TuPEtxFUQdP4w8zXkEeI/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScVZHMvkrRucBCEU2FdYZ3IqnOTlqB_srDdbLf0b9Dx21hrOw/viewform", "videos": ["https://www.youtube.com/watch?v=PIJ9XMrLTM4", "https://www.youtube.com/watch?v=EtKhhVWdTPo", "https://www.youtube.com/watch?v=bGBEMd9olmI"], "extra": ["https://drive.google.com/file/d/1FGiqbzTB_XbcNcwFo7fz4O7gEpPV3JNe/view?usp=sharing"], "pending": false}, {"t": "Subgrupos", "notes": ["https://drive.google.com/file/d/12KEktDFSUIOUs9E5bFAn6FubhJOrdIxi/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/10NOtss3cGOVjHqGdsk_c3Uy6K2QBTsF21YkLhoe29l8/viewform", "videos": ["https://www.youtube.com/watch?v=9Ni1M9XexbQ", "https://www.youtube.com/watch?v=w1GQwfojggM"], "extra": ["https://drive.google.com/file/d/1xRvIVs30TtHnXjNd9xgrgCMytSJXng70/view?usp=sharing"], "pending": false}, {"t": "Subgrupos cíclicos", "notes": ["https://drive.google.com/file/d/1Qz4HXGDjpeIuTFk40xf3nMOjr4D7NJvv/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLScfq87zlsw14aEefwKuTKBSkTrDvCz8Vguo9_j9Kx15H2K72g/viewform", "videos": ["https://www.youtube.com/watch?v=rLD48TppBM0", "https://www.youtube.com/watch?v=0JEOUrMojEk", "https://www.youtube.com/watch?v=3kazL2li0Xw"], "extra": ["https://drive.google.com/file/d/1tHMSz5ljt1vRVOWNe5M258oY9KuVeEiZ/view?usp=sharing"], "pending": false}, {"t": "Subgrupos generados por un subconjunto", "notes": ["https://drive.google.com/file/d/1ak4xx0nc0iLHzsEv9tDVl5T5i7JreFFQ/view?usp=sharing"], "quiz": "https://docs.google.com/forms/d/e/1FAIpQLSe3n2AfNDUJBWsKhbQrZfluYSHONKyeR74pHNmzUtfeM9Vu8g/viewform", "videos": ["https://www.youtube.com/watch?v=fwCwLqMwjP8", "https://www.youtube.com/watch?v=UeN1cilTseg"], "extra": ["https://drive.google.com/file/d/1JJlI0Qk0Ccy3_U5XTcUJMAsKTaCGWMiN/view?usp=sharing"], "pending": false}, {"t": "Clases laterales", "notes": ["https://drive.google.com/file/d/1NkE78NHKigTOZ9yY7z6Hjw0y8GjZ33XQ/view?usp=sharing"], "quiz": null, "videos": ["https://www.youtube.com/watch?v=-l7P9eV7sJk", "https://www.youtube.com/watch?v=Hx6M48CX1Tk", "https://www.youtube.com/watch?v=Un1I8xafA1U"], "extra": [], "pending": false}, {"t": "El teorema de Lagrange", "notes": ["https://drive.google.com/file/d/1hCExnvY_7paMU_i8SpHib1RCx2AdTzL_/view?usp=sharing"], "quiz": "https://forms.gle/aTbBs4XKvwCDwbNPA", "videos": ["https://www.youtube.com/watch?v=E7AAzkR33-E", "https://www.youtube.com/watch?v=gg6JdqAd15c", "https://www.youtube.com/watch?v=6jlrq5tUYIw"], "extra": [], "pending": false}, {"t": "Grupos cíclicos", "notes": ["https://drive.google.com/file/d/1MqnPvddEi4d5QGRlyW5kE1kayPJxJ6-b/view?usp=sharing"], "quiz": "https://forms.gle/sLERvWjN5jzmGGEj6", "videos": ["https://www.youtube.com/watch?v=J96EwZiQnwA", "https://www.youtube.com/watch?v=gM5yDdcxYsw"], "extra": [], "pending": false}]}, {"name": "Los teoremas de isomorfismo", "quiz": ["https://forms.gle/jqbXSBsTt8ygYR87A", "https://forms.gle/Ko2xGttA6JoxcY3KA"], "practice": "https://www.overleaf.com/read/nqrzcvdmnzbc", "items": [{"t": "Subgrupos normales", "notes": ["https://drive.google.com/file/d/1eFIpMXnFAe-8sMJ22MnkH5-M1iwJidgD/view?usp=sharing"], "quiz": "https://forms.gle/xwUBYPT5wrXUQ7Wb9", "videos": ["https://www.youtube.com/watch?v=ETtTk0TsGAM", "https://www.youtube.com/watch?v=l6ygi6D21SE", "https://www.youtube.com/watch?v=qIs-TYhQKWY", "https://www.youtube.com/watch?v=d6vKYGeu8Wg"], "extra": [], "pending": false}, {"t": "Grupos cociente", "notes": ["https://drive.google.com/file/d/1k-3tFvQtKobW57lMe5-VQ8K26uCMyO1k/view?usp=sharing"], "quiz": "https://forms.gle/5NEa24rFf4n46ZPE8", "videos": ["https://www.youtube.com/watch?v=HnToYUJcgwM", "https://www.youtube.com/watch?v=tmPZkE2F_sk"], "extra": [], "pending": false}, {"t": "El primer teorema de isomorfismo", "notes": ["https://drive.google.com/file/d/1eArRRU0W9fDIlfG0lqX-5IcD7Tm-Bcyd/view?usp=sharing"], "quiz": "https://forms.gle/LNztqtU2PVKTF57j6", "videos": ["https://www.youtube.com/watch?v=wMaWMQEsWXY", "https://www.youtube.com/watch?v=6GLU9uzZauM"], "extra": [], "pending": false}, {"t": "El segundo teorema de isomorfismo", "notes": ["https://drive.google.com/file/d/1NQBdGm6ufniY0OV2y7AXF3QIfdxSbFDl/view?usp=sharing"], "quiz": "https://forms.gle/FWiiWRrZAfqGe6957", "videos": ["https://www.youtube.com/watch?v=xbspUW2ZJbM", "https://www.youtube.com/watch?v=NHKfLDemXZY"], "extra": [], "pending": false}, {"t": "El tercer teorema de isomorfismo", "notes": ["https://drive.google.com/file/d/1udQOBT4c3NgHPiC3Vewv6V_GY2doeWS-/view?usp=sharing"], "quiz": "https://forms.gle/ztAhBptnPtBu1UnC6", "videos": ["https://www.youtube.com/watch?v=XG--em2Cq4w"], "extra": [], "pending": false}, {"t": "El teorema de la correspondencia", "notes": ["https://drive.google.com/file/d/1CvMpNBGayoo84uIjRy1b9G2XFdIkcJJ3/view?usp=sharing"], "quiz": "https://forms.gle/cdSi66d32MeZi3jGA", "videos": ["https://www.youtube.com/watch?v=lIoEcs_GwLM"], "extra": [], "pending": false}, {"t": "Producto directo", "notes": ["https://drive.google.com/file/d/19V57Sij9o_YfVDem_x3nnOtZViGDYwMH/view?usp=sharing"], "quiz": "https://forms.gle/A4YLUd6ePufvcLae6", "videos": ["https://www.youtube.com/watch?v=0hI2zxeNnL8", "https://www.youtube.com/watch?v=54ZieHi4P-o", "https://www.youtube.com/watch?v=ykwpTVRy3jk"], "extra": [], "pending": false}]}, {"name": "Acciones de grupos", "quiz": [], "practice": "https://www.overleaf.com/read/zpypfthwghpj", "items": [{"t": "Conjugados", "notes": ["https://drive.google.com/file/d/1pBafAmxeMjrD1KDW76kiT9hhDNg3HTcM/view?usp=sharing"], "quiz": "https://forms.gle/rLejy7i41mdQ48MT8", "videos": ["https://www.youtube.com/watch?v=GMtClyMAKkI", "https://www.youtube.com/watch?v=39_NeEVComg", "https://www.youtube.com/watch?v=fqQssRq0wFw"], "extra": [], "pending": false}, {"t": "Más sobre el grupo simétrico", "notes": ["https://drive.google.com/file/d/1LJdX8N5TuzvIh9NblnadVirqsPfbBwoo/view?usp=sharing"], "quiz": "https://forms.gle/iTqUimeJZNY68e9a6", "videos": ["https://www.youtube.com/watch?v=TXLWoGUtGG8", "https://www.youtube.com/watch?v=mzSZXw9yv4I"], "extra": [], "pending": false}, {"t": "Los grupos alternantes Aₙ, n ≥ 5, son simples", "notes": [], "quiz": null, "videos": ["https://www.youtube.com/watch?v=fsOvD1UayvY", "https://www.youtube.com/watch?v=XAGYAR-0nKA", "https://www.youtube.com/watch?v=MA-VzURgFf4"], "extra": [], "pending": true}, {"t": "Teoremas de representación", "notes": ["https://drive.google.com/file/d/1b2rOwEwLnVAJq8qTYThDTFO1EslfuCdb/view?usp=sharing"], "quiz": "https://forms.gle/eybSSHfPTvU51vAD8", "videos": ["https://www.youtube.com/watch?v=1yIQI3Puc2Y"], "extra": [], "pending": false}, {"t": "G-conjuntos", "notes": ["https://drive.google.com/file/d/1iOOUmB1k1chHwHY7blkbsOsnmSAmr-pY/view?usp=sharing"], "quiz": "https://forms.gle/AA3kmiTFdRjyJMax6", "videos": ["https://www.youtube.com/watch?v=vd8nb8uIZmQ"], "extra": [], "pending": false}, {"t": "Conteo de órbitas", "notes": ["https://drive.google.com/file/d/1FloWg1UZGO5zGannO1hvCsr9ft8h3TpY/view?usp=sharing"], "quiz": "https://forms.gle/4reJ2KwKF1vwir258", "videos": ["https://www.youtube.com/watch?v=ZXvOztjq3ZE"], "extra": [], "pending": false}]}, {"name": "Los teoremas de Sylow", "quiz": [], "practice": null, "items": [{"t": "p-grupos", "notes": ["https://drive.google.com/file/d/1R35NY1ZDXcXMhPjlQn9zeaBD75NzQouo/view?usp=sharing"], "quiz": "https://forms.gle/9d4Vf22QNd9VgcYT6", "videos": ["https://www.youtube.com/watch?v=ZcY4vCcNrfI", "https://www.youtube.com/watch?v=xeHOwLYS2Ms"], "extra": [], "pending": false}, {"t": "Los teoremas de Sylow", "notes": ["https://drive.google.com/file/d/11FvTxMJbFDaxwhmShbSt6i2FpMVWO2nK/view?usp=sharing"], "quiz": null, "videos": ["https://www.youtube.com/watch?v=j3UXvc4IoPY", "https://www.youtube.com/watch?v=hiJXs9gSsEg"], "extra": [], "pending": false}, {"t": "Grupos de orden pequeño", "notes": [], "quiz": null, "videos": [], "extra": [], "pending": true}]}]};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const KEY="ljss-course-"+C.key;
+let done={};try{done=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}};
+
+// meta: bibliography + credits
+let meta=`<div><h3>Bibliografía</h3><ul>${C.biblio.map(b=>`<li><span class="bk">${b.url?`<a href="${b.url}">${esc(b.b)}</a>`:esc(b.b)}</span><br><small>${esc(b.a)}${b.note?" · "+esc(b.note):""}</small></li>`).join("")}</ul></div>`;
+meta+=C.credits.length?`<div><h3>Créditos</h3><ul>${C.credits.map(([r,n])=>`<li>${esc(n)}<br><small>${esc(r)}</small></li>`).join("")}</ul></div>`
+  :`<div><h3>Práctica</h3><p style="margin:0">Resuelve los ejercicios de los libros de la bibliografía. Todos los videos están también en el <a href="https://www.youtube.com/channel/UCmF6r_udwPhwlkyAocDykWw">canal de YouTube</a>.</p></div>`;
+document.getElementById("meta").innerHTML=meta;
+
+const lbl=(arr,word,i)=>arr.length>1?`${word} ${i+1}`:word;
+document.getElementById("units").innerHTML=C.units.map((u,ui)=>{
+  const rows=u.items.map((it,ii)=>{
+    const id=`c-${ui+1}-${ii+1}`,r=[];
+    (it.notes||[]).forEach((h,k)=>r.push(`<a class="r note" href="${h}">${lbl(it.notes,"Notas",k)}</a>`));
+    if(it.pending)r.push(`<span class="r pend">Notas en preparación</span>`);
+    if(it.quiz)r.push(`<a class="r" href="${it.quiz}">Cuestionario</a>`);
+    it.videos.forEach((h,k)=>r.push(`<a class="r vid" href="${h}">${lbl(it.videos,"Video",k)}</a>`));
+    (it.extra||[]).forEach((h,k)=>r.push(`<a class="r vid" href="${h}">${lbl(it.extra,"Complementario",k)}</a>`));
+    return `<li class="topic${done[id]?" done":""}"><input type="checkbox" id="${id}" ${done[id]?"checked":""} aria-label="Marcar como visto: ${esc(it.t)}">
+      <span class="no">${ui+1}.${ii+1}</span><div style="min-width:0"><p class="t"><label for="${id}">${esc(it.t)}</label></p><div class="res">${r.join("")}</div></div></li>`}).join("");
+  const f=[];
+  (u.quiz||[]).forEach((h,k)=>f.push(`<a href="${h}">${u.quiz.length>1?"Cuestionario "+(k+1):"Cuestionario de repaso"}</a>`));
+  if(u.practice)f.push(`<a href="${u.practice}">Ejercicios de práctica (Overleaf)</a>`);
+  const foot=f.length?`<div class="ufoot"><b>Repaso de la unidad</b>${f.join("")}</div>`:"";
+  return `<section class="unit" id="unidad-${ui+1}"><div class="uh"><span class="num">Unidad ${ui+1}</span><h2>${esc(u.name)}</h2><span class="cnt" id="cnt-${ui}"></span></div><ol class="topics">${rows}</ol>${foot}</section>`}).join("");
+
+document.getElementById("toc").innerHTML=C.units.map((u,ui)=>`<li><a href="#unidad-${ui+1}"><span class="n">${ui+1}</span><span>${esc(u.name)}</span><span class="bar"><i id="bar-${ui}"></i></span></a></li>`).join("");
+
+function refresh(){
+  let all=0,seen=0;
+  C.units.forEach((u,ui)=>{const n=u.items.length,s=u.items.filter((_,ii)=>done[`c-${ui+1}-${ii+1}`]).length;all+=n;seen+=s;
+    document.getElementById("cnt-"+ui).textContent=`${s}/${n} vistos`;document.getElementById("bar-"+ui).style.width=(100*s/n)+"%"});
+  document.getElementById("prog").textContent=`${seen} de ${all} temas vistos`;
+}
+document.getElementById("units").addEventListener("change",e=>{const t=e.target;if(t.type!=="checkbox")return;
+  if(t.checked)done[t.id]=1;else delete done[t.id];t.closest(".topic").classList.toggle("done",t.checked);save();refresh()});
+let armed=false;const rb=document.getElementById("reset");
+rb.addEventListener("click",()=>{if(!armed){armed=true;rb.textContent="¿Seguro? Haz clic otra vez";setTimeout(()=>{armed=false;rb.textContent="Desmarcar todo"},3000);return}
+  done={};save();document.querySelectorAll(".topic input").forEach(i=>{i.checked=false;i.closest(".topic").classList.remove("done")});armed=false;rb.textContent="Desmarcar todo";refresh()});
+refresh();
+
+if(C.hero){const id=(C.hero.video.match(/v=([\w-]+)/)||[])[1];document.getElementById("hero").innerHTML=`<div class="vhead"><span class="k">${esc(C.hero.kicker)}</span><div class="pt">${esc(C.hero.title)}</div><p class="ps">${esc(C.hero.sub)}</p></div><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${esc(C.hero.title)}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>`}
+
+// Background: the universal cover p: ℝ → S¹ drawn as a helix over a circle, with the fibre over one point marked
+const bg=document.getElementById("bg");
+function drawBg(){
+  if(C.bg==="s3"){drawS3();return}
+  if(C.bg!=="helix"){bg.hidden=true;return}
+  const r=bg.getBoundingClientRect();if(!r.width)return;
+  const d=devicePixelRatio||1;bg.width=r.width*d;bg.height=r.height*d;
+  const x=bg.getContext("2d");x.setTransform(d,0,0,d,0,0);x.clearRect(0,0,r.width,r.height);
+  const cs=getComputedStyle(document.documentElement),fg=cs.getPropertyValue("--fg").trim(),acc=cs.getPropertyValue("--accent").trim(),mu=cs.getPropertyValue("--muted").trim();
+  const narrow=r.width<700, W=r.width, H=r.height;
+  const R=narrow?34:Math.min(78,W*.08), cx=narrow?W-R-8:W-R-70, k=.32;
+  const top=26, base=H-34, turns=narrow?4:5, pitch=(base-top-R*k*2-70)/turns;
+  x.globalAlpha=narrow?.28:.9;
+  const P=t=>[cx+R*Math.cos(t), top+R*k + pitch*t/(2*Math.PI) + R*k*Math.sin(t)];
+  // helix: back half faint, front half solid
+  for(let pass=0;pass<2;pass++){
+    x.lineWidth=pass?1.6:1;x.strokeStyle=pass?fg:mu;x.globalAlpha=(narrow?.28:.9)*(pass?.55:.3);
+    x.beginPath();let pen=false;
+    for(let t=0;t<=turns*2*Math.PI;t+=.04){const front=Math.sin(t)>0;const [px,py]=P(t);
+      if(front===!!pass){pen?x.lineTo(px,py):x.moveTo(px,py);pen=true}else pen=false}
+    x.stroke();
+  }
+  // circle S¹
+  const cy=base-R*k;
+  x.globalAlpha=narrow?.3:.6;x.strokeStyle=fg;x.lineWidth=1.6;x.beginPath();x.ellipse(cx,cy,R,R*k,0,0,2*Math.PI);x.stroke();
+  // projection arrow
+  const ay0=P(turns*2*Math.PI)[1]+16, ay1=cy-R*k-10;
+  x.strokeStyle=mu;x.lineWidth=1;x.beginPath();x.moveTo(cx-R-18,ay0);x.lineTo(cx-R-18,ay1);x.stroke();
+  x.beginPath();x.moveTo(cx-R-22,ay1-6);x.lineTo(cx-R-18,ay1);x.lineTo(cx-R-14,ay1-6);x.stroke();
+  // fibre over one point: p⁻¹(x₀) ≅ ℤ
+  const th=Math.PI/3;x.fillStyle=acc;x.globalAlpha=narrow?.4:.95;
+  for(let n=0;n<turns;n++){const [px,py]=P(th+2*Math.PI*n);x.beginPath();x.arc(px,py,3.2,0,7);x.fill()}
+  x.beginPath();x.arc(cx+R*Math.cos(th),cy+R*k*Math.sin(th),4,0,7);x.fill();
+  if(!narrow){x.globalAlpha=.85;x.fillStyle=fg;x.font="italic 17px Spectral, Georgia, serif";
+    x.fillText("ℝ",cx+R+14,top+R*k+8);x.fillText("S¹",cx+R+14,cy+5);x.fillText("p",cx-R-36,(ay0+ay1)/2+5);
+    x.fillStyle=acc;x.font="italic 14px Spectral, Georgia, serif";x.fillText("x₀",cx+R*Math.cos(th)+8,cy+R*k*Math.sin(th)+16)}
+  x.globalAlpha=1;
+}
+// Background: Cayley graph of S₃ with generators s=(1 2), t=(2 3): a hexagon with alternating edges
+function drawS3(){
+  const r=bg.getBoundingClientRect();if(!r.width)return;
+  const d=devicePixelRatio||1;bg.width=r.width*d;bg.height=r.height*d;
+  const x=bg.getContext("2d");x.setTransform(d,0,0,d,0,0);x.clearRect(0,0,r.width,r.height);
+  const cs=getComputedStyle(document.documentElement),fg=cs.getPropertyValue("--fg").trim(),acc=cs.getPropertyValue("--accent").trim(),mu=cs.getPropertyValue("--muted").trim(),bgc=cs.getPropertyValue("--bg").trim();
+  const narrow=r.width<700,W=r.width,H=r.height;
+  const R=narrow?44:Math.min(96,H*.33),cx=narrow?W-R-14:W-R-100,cy=H/2-6;
+  const mul=(g,h)=>h.map(i=>g[i]),S=[1,0,2],T=[0,2,1];
+  const cyc=g=>{const seen=[],out=[];for(let i=0;i<3;i++){if(seen[i]||g[i]===i)continue;let c=[],j=i;while(!seen[j]){seen[j]=1;c.push(j+1);j=g[j]}out.push("("+c.join(" ")+")")}return out.join("")||"e"};
+  const V=[[0,1,2]];for(let k=1;k<6;k++)V.push(mul(V[k-1],k%2?S:T));
+  const P=V.map((_,k)=>{const a=-Math.PI/2+k*Math.PI/3;return [cx+R*Math.cos(a),cy+R*Math.sin(a),a]});
+  x.globalAlpha=narrow?.3:.95;
+  for(let k=0;k<6;k++){const a=P[k],b=P[(k+1)%6],isS=k%2===0;
+    x.strokeStyle=isS?acc:mu;x.lineWidth=isS?2:1.5;x.setLineDash(isS?[]:[5,4]);
+    x.beginPath();x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke()}
+  x.setLineDash([]);
+  P.forEach(([px,py,a],k)=>{x.beginPath();x.arc(px,py,4.5,0,7);x.fillStyle=k?bgc:acc;x.fill();x.strokeStyle=k?fg:acc;x.lineWidth=1.5;x.stroke();
+    if(!narrow){x.fillStyle=fg;x.font="italic 15px Spectral, Georgia, serif";const lab=cyc(V[k]),w=x.measureText(lab).width;
+      x.fillText(lab,px+Math.cos(a)*24-w/2,py+Math.sin(a)*20+5)}});
+  if(!narrow){x.font="12px 'IBM Plex Mono', monospace";x.fillStyle=mu;const c="Cay(S₃, {(1 2), (2 3)})",w=x.measureText(c).width;x.fillText(c,cx-w/2,cy+R+46)}
+  x.globalAlpha=1;
+}
+drawBg();
+addEventListener("resize",drawBg);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",drawBg);
+new MutationObserver(drawBg).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+document.fonts&&document.fonts.ready.then(drawBg);
+</script>
+
+</body>
+</html>
