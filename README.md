@@ -7,3 +7,4 @@ Página académica de Luis Jorge Sánchez Saldaña (Facultad de Ciencias, UNAM).
 - `og-image.png`: imagen de vista previa para redes
 - `publications.html`, `coauthors.html`, `students.html`, `courses.html`, `contact.html`: una página por sección
 - `assets/site.css` y `assets/site.js`: estilos y datos compartidos (publicaciones, coautores y estudiantes se editan en `site.js`)
+- `tools/version-assets.py`: después de editar `assets/`, ejecutarlo para que los navegadores carguen la versión nueva
