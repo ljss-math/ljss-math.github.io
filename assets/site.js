@@ -60,7 +60,7 @@ const P={
 const CRP=["colin","rita","porf"];
 // s: prep | sub | acc | pub
 const pubs=[
- {t:"Proper geometric dimension of the mapping class groups of a non-orientable surface with punctures",w:CRP,s:"prep",v:"In preparation"},
+ {t:"The proper geometric dimension of the mapping class groups of non-orientable surfaces with punctures",w:CRP,y:2026,s:"sub",v:"Preprint",ax:"2609.22505"},
  {t:"Contractible Rips complexes of groups via metric gluings",w:["li"],y:2026,s:"sub",v:"Preprint",ax:"2608.24279"},
  {t:"Centralizers and classifying spaces for commutativity of SL₂(ℤ[1/p])",w:["omar","flores"],y:2026,s:"sub",v:"Submitted",ax:"2607.28001"},
  {t:"Finiteness properties and quasi-isometry of group pairs",w:["li"],y:2026,s:"sub",v:"Submitted",ax:"2603.06535"},
