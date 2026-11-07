@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="14" fill="#17202b"/>
-<g fill="#fff" transform="translate(4 0) skewX(-9)">
-<rect x="14" y="11" width="8" height="34"/>
-<rect x="10" y="10" width="16" height="2.4"/>
-<rect x="14" y="42.6" width="22" height="2.4"/>
-<rect x="33.6" y="37" width="2.4" height="8"/>
-<rect x="38" y="11" width="8" height="31"/>
-<rect x="34" y="10" width="16" height="2.4"/>
-<path d="M38 41 L46 41 C46 53 41 57 33.5 57 L33.5 54.6 C37 54.6 38 50 38 41 Z"/>
-<circle cx="32" cy="53.4" r="4"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#2c4a9a"/><g fill="#fff"><path transform="translate(32 32) scale(0.04473 -0.04473) translate(-546.5 -343.5) translate(0.0 0)" d="M77 0V698H229V135H495V0Z"/><path transform="translate(32 32) scale(0.04473 -0.04473) translate(-546.5 -343.5) translate(530.0 0)" d="M486 698V202Q486 154 470.5 114.5Q455 75 425.0 47.5Q395 20 352.5 4.5Q310 -11 256 -11Q204 -11 164.5 3.0Q125 17 96.5 43.0Q68 69 50.0 105.0Q32 141 25 185L167 213Q184 122 254 122Q287 122 310.5 143.0Q334 164 334 209V576H122V698Z"/></g></svg>
