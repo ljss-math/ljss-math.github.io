@@ -98,6 +98,7 @@ const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&qu
 const norm=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
 const who=w=>w.map(k=>P[k][1]?`<a href="${P[k][1]}">${esc(P[k][0])}</a>`:esc(P[k][0]));
 function joinNames(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" "+L("and")+" "+a[a.length-1]}
+pubs.sort((a,b)=>(b.y||9999)-(a.y||9999));
 pubs.forEach((p,i)=>{p.n=pubs.length-i;p.hay=norm([p.t,p.j||"",p.v,...p.w.map(k=>P[k][0])].join(" "))});
 
 function renderChips(){
