@@ -69,7 +69,7 @@ const pubs=[
  {t:"A note on finiteness properties of vertex stabilisers",w:["li"],y:2025,s:"acc",j:"Proc. Amer. Math. Soc.",v:"to appear",ax:"2502.14751"},
  {t:"The proper geometric dimension of the full mapping class group of a punctured orientable surface",w:CRP,y:2025,s:"pub",j:"J. Group Theory",v:"(2025)",pv:"https://doi.org/10.1515/jgth-2024-0227",ax:"2412.14410"},
  {t:"On the K-theory of groups of the form ℤⁿ ⋊ ℤ/m with m square-free",w:["mario"],y:2024,s:"acc",j:"Proc. Amer. Math. Soc.",v:"to appear",ax:"2410.09263"},
- {t:"On the dimension of Harer's spine for the decorated Teichmüller space",w:CRP,y:2026,s:"pub",j:"Homology Homotopy Appl.",v:"(2026)",pv:"https://intlpress.com/JDetail/2054560156660047874",ax:"2409.04392"},
+ {t:"On the dimension of Harer's spine for the decorated Teichmüller space",w:CRP,y:2026,s:"pub",j:"Homology Homotopy Appl.",v:"28 (2026), no. 2, 67–78",pv:"https://intlpress.com/JDetail/2054560156660047874",ax:"2409.04392"},
  {t:"On the group cohomology of groups of the form ℤⁿ ⋊ ℤ/m with m square-free",w:["mario"],y:2024,s:"sub",v:"Submitted",ax:"2403.14569"},
  {t:"Centralisers and the virtually cyclic dimension of Out(F_N)",w:["guerch","hughes"],y:2023,s:"sub",v:"Submitted",ax:"2308.01590"},
  {t:"The classifying space for commutativity of geometric orientable 3-manifold groups",w:["omar","legh"],y:2025,s:"pub",j:"Topology Appl.",v:"367 (2025)",pv:"https://www.sciencedirect.com/science/article/pii/S0166864125002822",ax:"2307.04997"},
