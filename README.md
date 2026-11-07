@@ -1,4 +1,4 @@
-# ljss-math.github.io
+# luisjorgesanchezsaldana.github.io
 
 Página académica de Luis Jorge Sánchez Saldaña (Facultad de Ciencias, UNAM).
 
