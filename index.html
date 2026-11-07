@@ -3,12 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Luis Jorge Sánchez Saldaña</title>
-<meta name="description" content="Luis Jorge Sánchez Saldaña, Full Professor at the Facultad de Ciencias, UNAM. Algebraic topology and geometric group theory: publications, students and courses.">
 <meta name="author" content="Luis Jorge Sánchez Saldaña">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Luis Jorge Sánchez Saldaña">
-<meta property="og:description" content="Algebraic topology and geometric group theory at the Facultad de Ciencias, UNAM: publications, students and courses.">
 <meta property="og:image" content="https://luisjorgesanchezsaldana.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -16,148 +12,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<title>Luis Jorge Sánchez Saldaña</title>
+<meta name="description" content="Luis Jorge Sánchez Saldaña, Full Professor at the Facultad de Ciencias, UNAM. Algebraic topology and geometric group theory: publications, students and courses.">
+<meta property="og:title" content="Luis Jorge Sánchez Saldaña">
+<meta property="og:description" content="Luis Jorge Sánchez Saldaña, Full Professor at the Facultad de Ciencias, UNAM. Algebraic topology and geometric group theory: publications, students and courses.">
 <meta property="og:url" content="https://luisjorgesanchezsaldana.github.io/">
 <link rel="canonical" href="https://luisjorgesanchezsaldana.github.io/">
-<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<style>
-/* Layout: one-column academic page, sticky section nav, hero with portrait photo */
-:root{
-  --bg:#f5f6f8; --surface:#ffffff; --fg:#17202b; --muted:#5b6675; --line:#d9dee6;
-  --accent:#2c4a9a; --accent-soft:#e6ebf7; --ok:#2f6b4f; --warn:#8a5a12;
-  --display:"Spectral", Georgia, "Times New Roman", serif;
-  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f141b; --surface:#161d26; --fg:#e3e8ef; --muted:#9aa5b4; --line:#2a3441;
-  --accent:#93acf0; --accent-soft:#1e2a44; --ok:#7cc4a0; --warn:#e0b26a; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0f141b; --surface:#161d26; --fg:#e3e8ef; --muted:#9aa5b4; --line:#2a3441;
-  --accent:#93acf0; --accent-soft:#1e2a44; --ok:#7cc4a0; --warn:#e0b26a; color-scheme:dark}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);margin:0}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
-a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
-a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
-.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-
-/* nav */
-nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
-nav.top .wrap{display:flex;align-items:center;gap:20px;padding-block:10px;overflow-x:auto;scrollbar-width:none}
-nav.top .brand{font-family:var(--display);font-weight:600;white-space:nowrap;color:var(--fg);text-decoration:none;margin-right:auto}
-nav.top a.l{color:var(--muted);text-decoration:none;font-size:14px;white-space:nowrap}
-nav.top a.l:hover{color:var(--fg)}
-.lang{font:500 12px/1 var(--mono);letter-spacing:.06em;padding:6px 9px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--fg);cursor:pointer;white-space:nowrap}
-.lang:hover{border-color:var(--accent);color:var(--accent)}
-
-/* hero */
-header.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px 40px}
-.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-h1{font:600 clamp(34px,5vw,50px)/1.08 var(--display);margin:14px 0 14px;text-wrap:balance;letter-spacing:-.01em}
-.role{font-size:18px;color:var(--muted);margin:0 0 22px;max-width:52ch}
-.role b{color:var(--fg);font-weight:500}
-.role{margin-bottom:10px}
-.email{font:14px var(--mono);color:var(--fg);margin:0 0 22px}
-.email span{color:var(--muted)}
-.links{display:flex;flex-wrap:wrap;gap:8px}
-.btn{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);text-decoration:none;cursor:pointer;font-family:inherit}
-.btn:hover{border-color:var(--accent);color:var(--accent)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
-.btn.primary:hover{color:var(--bg);opacity:.9}
-.figure{margin:0;max-width:340px;justify-self:end;width:100%}
-.figure img{display:block;width:100%;height:auto;border-radius:10px}
-
-/* sections */
-section{padding-block:44px;border-top:1px solid var(--line)}
-h2{font:600 28px/1.2 var(--display);margin:0 0 6px}
-.lede{color:var(--muted);margin:0 0 26px;max-width:65ch}
-.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
-.interests{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.interests li{background:var(--accent-soft);color:var(--fg);padding:5px 11px;border-radius:999px;font-size:14px}
-.timeline{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px}
-.timeline .yr{font:13px/1.7 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.timeline .what{min-width:0}
-.timeline .what small{display:block;color:var(--muted);font-size:14px}
-h3{font:600 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
-.note{margin-top:22px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:8px;font-size:15px}
-
-/* publications */
-.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:20px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font:500 13px var(--body);padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
-.chip .n{font-family:var(--mono);font-variant-numeric:tabular-nums;opacity:.75;margin-left:4px}
-.search{flex:1 1 220px;min-width:0;font:14px var(--body);padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
-.pubs{list-style:none;margin:0;padding:0}
-.pub{display:grid;grid-template-columns:44px 64px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
-.pub .num{font:13px/1.9 var(--mono);color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
-.pub .yr{font:500 13px/1.9 var(--mono);font-variant-numeric:tabular-nums}
-.pub .t{font:400 18px/1.4 var(--display);margin:0 0 4px}
-.pub .meta{font-size:14px;color:var(--muted);margin:0}
-.pub .meta i{color:var(--fg);font-style:italic}
-.pub .row{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:8px;font-size:13px}
-.tag{font:500 11px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 7px;border-radius:4px;border:1px solid currentColor}
-.tag.pub-d{color:var(--ok)} .tag.acc{color:var(--accent)} .tag.sub{color:var(--warn)} .tag.prep{color:var(--muted)}
-.empty{color:var(--muted);padding:20px 0}
-
-/* students */
-.studs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.studs ol{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.studs li{min-width:0}
-.studs .nm{font-weight:500}
-.studs .th{font-family:var(--display);font-style:italic;color:var(--fg);display:block;font-size:16px;line-height:1.35}
-.studs .in{font:12px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-
-/* coauthors */
-.coauth{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
-.coauth li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);min-width:0}
-.coauth .nm{min-width:0}
-.coauth a.nm{color:var(--fg);text-decoration-color:var(--line)}
-.coauth a.nm:hover{color:var(--accent);text-decoration-color:var(--accent)}
-.coauth button{font:12px var(--mono);font-variant-numeric:tabular-nums;color:var(--muted);background:none;border:0;padding:2px 0;cursor:pointer;white-space:nowrap}
-.coauth button:hover{color:var(--accent);text-decoration:underline}
-@media (max-width:760px){.coauth{grid-template-columns:1fr}}
-
-
-/* courses */
-.clist{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.clist li{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
-.clist a{font:400 19px/1.35 var(--display)}
-.clist span{font-size:14px;color:var(--muted)}
-
-/* contact */
-.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
-address{font-style:normal;color:var(--fg)}
-.mail{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.mail code{font:15px var(--mono);user-select:all}
-footer{padding-block:30px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
-
-@media (max-width:760px){
-  header.hero .wrap{grid-template-columns:1fr;padding-block:36px 28px;gap:24px}
-  .figure{max-width:260px;justify-self:start;width:100%}
-  .cols,.contact{grid-template-columns:1fr}
-  .studs{grid-template-columns:1fr}
-  .pub{grid-template-columns:40px minmax(0,1fr)}
-  .pub .num{display:none}
-}
-</style>
-
 <nav class="top" aria-label="Sections">
   <div class="wrap">
-    <a class="brand" href="#top">L. J. Sánchez Saldaña</a>
-    <a class="l" href="#research" data-i="nRes">Research</a>
-    <a class="l" href="#publications" data-i="nPub">Publications</a>
-    <a class="l" href="#coauthors" data-i="nCo">Coauthors</a>
-    <a class="l" href="#students" data-i="nSt">Students</a>
-    <a class="l" href="#courses" data-i="nCu">Courses</a>
-    <a class="l" href="#contact" data-i="nCt">Contact</a>
+    <a class="brand" href="./">L. J. Sánchez Saldaña</a>
+    <a class="l" href="research.html" data-i="nRes">Research</a>
+    <a class="l" href="publications.html" data-i="nPub">Publications</a>
+    <a class="l" href="coauthors.html" data-i="nCo">Coauthors</a>
+    <a class="l" href="students.html" data-i="nSt">Students</a>
+    <a class="l" href="courses.html" data-i="nCu">Courses</a>
+    <a class="l" href="contact.html" data-i="nCt">Contact</a>
     <button class="lang" id="lang" type="button" aria-label="Cambiar a español">ES</button>
   </div>
 </nav>
@@ -172,7 +44,7 @@ footer{padding-block:30px;color:var(--muted);font-size:13px;border-top:1px solid
       <div class="links">
         <a class="btn primary" href="https://arxiv.org/search/?searchtype=author&amp;query=Salda%C3%B1a%2C+L+J+S">arXiv</a>
         <a class="btn" href="https://zbmath.org/authors/sanchez-saldana.luis-jorge">zbMATH</a>
-        <a class="btn" href="#publications" data-i="nPub">Publications</a>
+        <a class="btn" href="publications.html" data-i="nPub">Publications</a>
         <a class="btn" href="https://www.youtube.com/channel/UCmF6r_udwPhwlkyAocDykWw"><span data-i="bYt">YouTube lectures</span></a>
         <a class="btn" href="https://sites.google.com/view/seminar-ggt-mexico/"><span data-i="bGgt">GGT seminar</span></a>
       </div>
@@ -181,250 +53,7 @@ footer{padding-block:30px;color:var(--muted);font-size:13px;border-top:1px solid
   </div>
 </header>
 
-<main>
-<section id="research">
-  <div class="wrap">
-    <h2 data-i="nRes">Research</h2>
-    <p class="lede" data-i="resLede">I study discrete groups through the spaces they act on: classifying spaces for families of subgroups, finiteness properties, and the algebraic K-theory predicted by the Farrell–Jones conjecture.</p>
-    <div class="cols">
-      <div>
-        <h3 data-i="hInt">Interests</h3>
-        <ul class="interests" data-i="ints">
-          <li>Algebraic topology</li>
-          <li>Algebraic and topological K-theory</li>
-          <li>Classifying spaces for groups</li>
-          <li>Finiteness properties of groups</li>
-          <li>Geometric group theory</li>
-        </ul>
-        <div class="note" data-i="note">I co-organize the <a href="https://sites.google.com/view/seminar-ggt-mexico/">Long-distance GGT seminar</a> with <a href="https://sites.google.com/site/jhdezhdez/">Jesús Hernández</a> and <a href="https://sites.google.com/im.unam.mx/haydeeperuyero/home">Haydee Peruyero</a>.</div>
-      </div>
-      <div>
-        <h3 data-i="hCar">Career</h3>
-        <ol class="timeline" data-i="tl">
-          <li><span class="yr">Current</span><span class="what">Full Professor<small><a href="http://www.matematicas.unam.mx/">Departamento de Matemáticas</a>, <a href="http://www.fciencias.unam.mx/">Facultad de Ciencias</a>, UNAM</small></span></li>
-          <li><span class="yr">2018–2019</span><span class="what">Postdoc, <a href="https://math.osu.edu/">The Ohio State University</a><small>with <a href="https://people.math.osu.edu/lafont.1/">Jean-François Lafont</a></small></span></li>
-          <li><span class="yr">2017–2018</span><span class="what">Postdoc, <a href="http://www.matcuer.unam.mx/">Instituto de Matemáticas, Unidad Cuernavaca</a><small>with <a href="http://www.matcuer.unam.mx/paginas/jlcm/">José Luis Cisneros</a></small></span></li>
-          <li><span class="yr">2016</span><span class="what">PhD, <a href="http://www.matmor.unam.mx/">Centro de Ciencias Matemáticas</a>, UNAM<small>advisor <a href="http://www.matmor.unam.mx/es/personal/investigadores/daniel">Daniel Juan Pineda</a></small></span></li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="publications">
-  <div class="wrap">
-    <h2 data-i="nPub">Publications</h2>
-    <p class="lede" data-i="pubLede">All preprints are on <a href="https://arxiv.org/search/?searchtype=author&amp;query=Salda%C3%B1a%2C+L+J+S">arXiv</a>. Filter by status or search by title, coauthor or journal.</p>
-    <div class="toolbar">
-      <div class="chips" role="group" aria-label="Filter by status" id="chips"></div>
-      <input class="search" id="q" type="search" placeholder="Search: K-theory, Kevin Li, Teichmüller…" aria-label="Search publications">
-    </div>
-    <ol class="pubs" id="pubs"></ol>
-  </div>
-</section>
-
-<section id="coauthors">
-  <div class="wrap">
-    <h2 data-i="nCo">Coauthors</h2>
-    <p class="lede" data-i="coLede">People I have written papers with. Select the paper count to see our joint work.</p>
-    <ul class="coauth" id="coauth"></ul>
-  </div>
-</section>
-
-<section id="students">
-  <div class="wrap">
-    <h2 data-i="nSt">Students</h2>
-    <p class="lede" data-i="stLede">Theses I have supervised.</p>
-    <div class="studs" id="studs"></div>
-  </div>
-</section>
-
-<section id="courses">
-  <div class="wrap">
-    <h2 data-i="nCu">Courses</h2>
-    <p class="lede" data-i="cuLede">Video courses with notes and exercises (in Spanish).</p>
-    <ul class="clist">
-      <li><a href="cursos/topologia-algebraica.html">Introducción a la topología algebraica</a><span data-i="cu1">Fundamental group, covering spaces, homology · 88 videos</span></li>
-      <li><a href="cursos/teoria-de-grupos.html">Introducción a la teoría de grupos</a><span data-i="cu2">Permutations to the Sylow theorems · notes, quizzes and videos</span></li>
-    </ul>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <h2 data-i="nCt">Contact</h2>
-    <div class="contact">
-      <div>
-        <h3 data-i="hMail">Email</h3>
-        <div class="mail"><code>luisjorge [at] ciencias [dot] unam [dot] mx</code></div>
-      </div>
-      <div>
-        <h3 data-i="hAddr">Address</h3>
-        <address>Departamento de Matemáticas, Facultad de Ciencias<br>Universidad Nacional Autónoma de México<br>Circuito Exterior s/n, Ciudad Universitaria<br>Coyoacán, 04510 Ciudad de México, México</address>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
 <footer><div class="wrap">Luis Jorge Sánchez Saldaña · Facultad de Ciencias, UNAM</div></footer>
-
-<script>
-const I={
- en:{fAll:"All",tPub:"Published",tAcc:"Accepted",tSub:"Preprint",fSub:"Preprints",tPrep:"In preparation",and:"and",with:"with",single:"Single author",
-   empty:"No publications match “%q”. Try a coauthor's surname or a word from the title.",pv:"Published version",paper:"paper",papers:"papers",
-   lvPhd:"PhD",lvMsc:"Master's",lvBsc:"Bachelor's",ph:"Search: K-theory, Kevin Li, Teichmüller…",btn:"ES",btnL:"Cambiar a español"},
- es:{fAll:"Todas",tPub:"Publicado",tAcc:"Aceptado",tSub:"Preprint",fSub:"Preprints",tPrep:"En preparación",and:"y",with:"con",single:"Autor único",
-   empty:"Ninguna publicación coincide con “%q”. Prueba con el apellido de un coautor o una palabra del título.",pv:"Versión publicada",paper:"artículo",papers:"artículos",
-   lvPhd:"Doctorado",lvMsc:"Maestría",lvBsc:"Licenciatura",ph:"Buscar: teoría K, Kevin Li, Teichmüller…",btn:"EN",btnL:"Switch to English"}
-};
-// Spanish versions of static text: a string replaces the element's content, an array lists [english, spanish] substitutions
-const ES={
- nRes:"Investigación",nPub:"Publicaciones",nCo:"Coautores",nSt:"Estudiantes",nCu:"Cursos",nCt:"Contacto",
- eyebrow:"Topología algebraica · Teoría geométrica de grupos",
- role:[["Full Professor (tenured)","Profesor Titular A de Tiempo Completo"]],
- bYt:"Clases en YouTube",bGgt:"Seminario de TGG",
- resLede:"Estudio grupos discretos a través de los espacios en los que actúan: espacios clasificantes para familias de subgrupos, propiedades de finitud y la teoría K algebraica que predice la conjetura de Farrell–Jones.",
- hInt:"Intereses",
- ints:[["Algebraic and topological K-theory","Teoría K algebraica y topológica"],["Algebraic topology","Topología algebraica"],["Classifying spaces for groups","Espacios clasificantes de grupos"],["Finiteness properties of groups","Propiedades de finitud de grupos"],["Geometric group theory","Teoría geométrica de grupos"]],
- note:[["I co-organize the ","Co-organizo el "],["Long-distance GGT seminar","Seminario a distancia de TGG"],[" with "," con "],[" and "," y "]],
- hCar:"Trayectoria",
- tl:[["Current","Actual"],["Full Professor","Profesor Titular"],["Postdoc,","Posdoctorado,"],["<small>with ","<small>con "],["PhD,","Doctorado,"],["advisor ","asesor: "]],
- pubLede:[["All preprints are on","Todos los preprints están en"],["Filter by status or search by title, coauthor or journal.","Filtra por estado o busca por título, coautor o revista."]],
- coLede:"Personas con las que he escrito artículos. Selecciona el número de artículos para ver nuestro trabajo conjunto.",
- stLede:"Tesis que he dirigido.",
- cuLede:"Cursos en video con notas y ejercicios.",
- cu1:"Grupo fundamental, espacios cubrientes, homología · 88 videos",
- cu2:"De las permutaciones a los teoremas de Sylow · notas, cuestionarios y videos",
- hMail:"Correo",hAddr:"Dirección"
-};
-let lang="en";
-const L=k=>I[lang][k]??k;
-const EN=new Map();document.querySelectorAll("[data-i]").forEach(el=>EN.set(el,el.innerHTML));
-function setLang(l){
-  lang=l;document.documentElement.lang=l;
-  EN.forEach((en,el)=>{const t=ES[el.dataset.i];
-    el.innerHTML=l==="en"||t==null?en:typeof t==="string"?t:t.reduce((h,[a,b])=>h.split(a).join(b),en)});
-  const b=document.getElementById("lang");b.textContent=L("btn");b.setAttribute("aria-label",L("btnL"));
-  document.getElementById("q").placeholder=L("ph");
-  renderChips();renderPubs();renderCo();renderSt();
-  try{localStorage.setItem("ljss-lang",l)}catch(e){}
-}
-const P={
-  colin:["Nestor Colín","https://sites.google.com/im.unam.mx/nestor-colin/home"],
-  rita:["Rita Jiménez Rolland","https://www.matem.unam.mx/~rita/"],
-  porf:["Porfirio L. León Álvarez","https://sites.google.com/view/porfrio-l-len-lvarez/"],
-  li:["Kevin Li","https://kevinlimath.wordpress.com/"],
-  omar:["Omar Antolín-Camarena","https://www.matem.unam.mx/~omar/"],
-  flores:["Ramón Flores","https://cluje28.wixsite.com/webderay"],
-  mario:["Mario Velásquez","https://sites.google.com/site/mavelasquezm/"],
-  guerch:["Yassine Guerch","https://perso.ens-lyon.fr/yassine.guerch/mes-articles/"],
-  hughes:["Sam Hughes","https://samhughesmaths.github.io/"],
-  legh:["Luis Eduardo García-Hernández","https://mathlegh.com/research"],
-  emp:["Eduardo Martínez-Pedroza","https://www.math.mun.ca/~emartinezped/"],
-  djp:["Daniel Juan-Pineda","http://www.matmor.unam.mx/es/personal/investigadores/daniel/"],
-  hidber:["Cristhian E. Hidber"], trujillo:["Alejandra Trujillo-Negrete"],
-  joecken:["Kyle Joecken"], lafont:["Jean-François Lafont","https://people.math.osu.edu/lafont.1/"],
-  arci:["José Antonio Arciniega-Nevarez"], jlcm:["José Luis Cisneros-Molina","http://www.matcuer.unam.mx/paginas/jlcm/"],
-  busta:["Mauricio Bustamante","https://sites.google.com/view/mbustamante/"]
-};
-const CRP=["colin","rita","porf"];
-// s: prep | sub | acc | pub
-const pubs=[
- {t:"Proper geometric dimension of the mapping class groups of a non-orientable surface with punctures",w:CRP,s:"prep",v:"In preparation"},
- {t:"Contractible Rips complexes of groups via metric gluings",w:["li"],y:2026,s:"sub",v:"Preprint",ax:"2608.24279"},
- {t:"Centralizers and classifying spaces for commutativity of SL₂(ℤ[1/p])",w:["omar","flores"],y:2026,s:"sub",v:"Submitted",ax:"2607.28001"},
- {t:"Finiteness properties and quasi-isometry of group pairs",w:["li"],y:2026,s:"sub",v:"Submitted",ax:"2603.06535"},
- {t:"A note on higher coherence of graphs of groups",w:["li"],y:2025,s:"sub",v:"Submitted",ax:"2511.16409"},
- {t:"A spine for the Teichmüller space of a non-orientable surface with punctures",w:CRP,y:2025,s:"pub",j:"Bull. London Math. Soc.",v:"(2025)",pv:"https://doi.org/10.1112/blms.70228",ax:"2504.05404"},
- {t:"A note on finiteness properties of vertex stabilisers",w:["li"],y:2025,s:"acc",j:"Proc. Amer. Math. Soc.",v:"to appear",ax:"2502.14751"},
- {t:"The proper geometric dimension of the full mapping class group of a punctured orientable surface",w:CRP,y:2025,s:"pub",j:"J. Group Theory",v:"(2025)",pv:"https://doi.org/10.1515/jgth-2024-0227",ax:"2412.14410"},
- {t:"On the K-theory of groups of the form ℤⁿ ⋊ ℤ/m with m square-free",w:["mario"],y:2024,s:"acc",j:"Proc. Amer. Math. Soc.",v:"to appear",ax:"2410.09263"},
- {t:"On the dimension of Harer's spine for the decorated Teichmüller space",w:CRP,y:2024,s:"acc",j:"Homology Homotopy Appl.",v:"to appear",ax:"2409.04392"},
- {t:"On the group cohomology of groups of the form ℤⁿ ⋊ ℤ/m with m square-free",w:["mario"],y:2024,s:"sub",v:"Submitted",ax:"2403.14569"},
- {t:"Centralisers and the virtually cyclic dimension of Out(F_N)",w:["guerch","hughes"],y:2023,s:"sub",v:"Submitted",ax:"2308.01590"},
- {t:"The classifying space for commutativity of geometric orientable 3-manifold groups",w:["omar","legh"],y:2025,s:"pub",j:"Topology Appl.",v:"367 (2025)",pv:"https://www.sciencedirect.com/science/article/pii/S0166864125002822",ax:"2307.04997"},
- {t:"Commensurators of abelian subgroups and the virtually abelian dimension of mapping class groups",w:["porf","rita"],y:2024,s:"pub",j:"J. Pure Appl. Algebra",v:"228 (2024), no. 6",pv:"https://www.sciencedirect.com/science/article/pii/S0022404923002487",ax:"2303.16961"},
- {t:"A survey on quasi-isometries of pairs: invariants and rigidity",w:["hughes","emp"],y:2021,s:"acc",j:"Beyond Hyperbolicity / Artin Groups, CAT(0) Geometry and Related Topics",v:"proceedings, to appear",ax:"2112.15046"},
- {t:"Bowditch taut spectrum and dimensions of groups",w:["emp"],y:2024,s:"pub",j:"Michigan Math. J.",v:"74 (2024), no. 3",pv:"https://doi.org/10.1307/mmj/20216121",ax:"2107.10643"},
- {t:"Quasi-isometry invariance of relative filling functions",w:["hughes","emp"],y:2023,s:"pub",j:"Groups Geom. Dyn.",v:"17 (2023), no. 4, 1483–1515",pv:"https://doi.org/10.4171/GGD/737",ax:"2107.03355"},
- {t:"Classifying spaces for the family of virtually abelian subgroups of orientable 3-manifold groups",w:["porf"],y:2022,s:"pub",j:"Forum Math.",v:"34 (2022), no. 5, 1277–1296",pv:"https://doi.org/10.1515/forum-2022-0006",ax:"2105.05905"},
- {t:"Quasi-isometric rigidity of subgroups and filtered ends",w:["emp"],y:2022,s:"pub",j:"Algebr. Geom. Topol.",v:"22 (2022), no. 6, 3023–3057",pv:"https://msp.org/agt/2022/22-6/p12.xhtml",ax:"2012.10494"},
- {t:"On the algebraic K-theory of 3-manifold groups",w:["djp"],y:2022,s:"pub",j:"J. Pure Appl. Algebra",v:"226 (2022), no. 7, 106981",pv:"https://doi.org/10.1016/j.jpaa.2021.106981",ax:"2011.11811"},
- {t:"On the dimension of the mapping class groups of a non-orientable surface",w:["hidber","trujillo"],y:2022,s:"pub",j:"Homology Homotopy Appl.",v:"24 (2022), no. 1, 347–372",pv:"https://doi.org/10.4310/HHA.2022.v24.n1.a17",ax:"2007.12542"},
- {t:"On the dimension of groups that satisfy certain conditions on their finite subgroups",w:[],y:2022,s:"pub",j:"Glasg. Math. J.",v:"64 (2022), no. 1, 45–50",pv:"https://doi.org/10.1017/S0017089520000531",ax:"2001.09185"},
- {t:"Groups acting on trees and the Eilenberg–Ganea problem for families",w:[],y:2020,s:"pub",j:"Proc. Amer. Math. Soc.",v:"148 (2020), no. 12, 5469–5479",pv:"https://doi.org/10.1090/proc/15203",ax:"1911.03457"},
- {t:"Brown's criterion and classifying spaces for families",w:["emp"],y:2020,s:"pub",j:"J. Pure Appl. Algebra",v:"224 (2020), no. 10, 106377",pv:"https://www.sciencedirect.com/science/article/pii/S002240492030075X",ax:"1908.05543"},
- {t:"Virtually cyclic dimension for 3-manifold groups",w:["joecken","lafont"],y:2021,s:"pub",j:"Groups Geom. Dyn.",v:"15 (2021), no. 2, 577–606",pv:"https://doi.org/10.4171/GGD/607",ax:"1904.04632"},
- {t:"Relative group homology theories with coefficients and the comparison homomorphism",w:["arci","jlcm"],y:2021,s:"pub",j:"Quaest. Math.",v:"44 (2021), no. 8, 1107–1132",pv:"https://doi.org/10.2989/16073606.2020.1770895",ax:"1809.01209"},
- {t:"The algebraic and topological K-theory of the Hilbert modular group",w:["mario"],y:2018,s:"pub",j:"Homology Homotopy Appl.",v:"20 (2018), no. 2, 377–402",pv:"https://doi.org/10.4310/HHA.2018.v20.n2.a19",ax:"1706.04691"},
- {t:"On the algebraic K-theory of the Hilbert modular group",w:["busta"],y:2016,s:"pub",j:"Algebr. Geom. Topol.",v:"16 (2016), no. 4, 2107–2125",pv:"https://projecteuclid.org/euclid.agt/1511895909",ax:"1505.03452"},
- {t:"The K- and L-theoretic Farrell–Jones isomorphism conjecture for braid groups",w:["djp"],y:2016,s:"pub",j:"Topology and Geometric Group Theory (Ohio State, 2010–2011)",v:"Springer, 33–43",pv:"https://link.springer.com/book/10.1007/978-3-319-43674-6",ax:"1511.02737"},
- {t:"On the ranks of the algebraic K-theory of hyperbolic groups",w:["djp"],y:2014,s:"pub",j:"Bol. Soc. Mat. Mex. (3)",v:"20 (2014), no. 2, 277–285",pv:"https://doi.org/10.1007/s40590-014-0042-6",ax:"1511.02767"}
-];
-const TAGS={pub:["pub-d","tPub"],acc:["acc","tAcc"],sub:["sub","tSub"],prep:["prep","tPrep"]};
-const FILTERS=[["all","fAll"],["pub","tPub"],["acc","tAcc"],["sub","fSub"]];
-let filt="all",query="";
-const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const norm=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
-const who=w=>w.map(k=>P[k][1]?`<a href="${P[k][1]}">${esc(P[k][0])}</a>`:esc(P[k][0]));
-function joinNames(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" "+L("and")+" "+a[a.length-1]}
-pubs.forEach((p,i)=>{p.n=pubs.length-i;p.hay=norm([p.t,p.j||"",p.v,...p.w.map(k=>P[k][0])].join(" "))});
-
-function renderChips(){
-  const c=document.getElementById("chips");
-  c.innerHTML=FILTERS.map(([k,l])=>{
-    const n=k==="all"?pubs.length:pubs.filter(p=>p.s===k||(k==="sub"&&p.s==="prep")).length;
-    return `<button class="chip" type="button" id="f-${k}" data-k="${k}" aria-pressed="${k===filt}">${L(l)}<span class="n">${n}</span></button>`}).join("");
-  c.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{filt=b.dataset.k;renderChips();renderPubs()});
-}
-function renderPubs(){
-  const q=norm(query.trim());
-  const list=pubs.filter(p=>(filt==="all"||p.s===filt||(filt==="sub"&&p.s==="prep"))&&(!q||p.hay.includes(q)));
-  const el=document.getElementById("pubs");
-  if(!list.length){el.innerHTML=`<li class="empty">${L("empty").replace("%q",esc(query))}</li>`;return}
-  el.innerHTML=list.map(p=>{
-    const [cls,lab]=TAGS[p.s];
-    const auth=p.w.length?`${L("with")} ${joinNames(who(p.w))}`:L("single");
-    const venue=p.j?` · <i>${esc(p.j)}</i> ${esc(lang==="es"?p.v.replace("proceedings, to appear","memorias, por aparecer").replace("to appear","por aparecer"):p.v)}`:"";
-    const links=[p.pv?`<a href="${p.pv}">${L("pv")} ↗</a>`:"",p.ax?`<a href="https://arxiv.org/abs/${p.ax}">arXiv:${p.ax}</a>`:""].join(" ");
-    return `<li class="pub"><span class="num">${p.n}</span><span class="yr">${p.y||"—"}</span><div style="min-width:0">
-      <p class="t">${esc(p.t)}</p><p class="meta">${auth}${venue}</p>
-      <div class="row"><span class="tag ${cls}">${L(lab)}</span>${links}</div></div></li>`}).join("");
-}
-document.getElementById("q").addEventListener("input",e=>{query=e.target.value;renderPubs()});
-
-const cnt={};pubs.forEach(p=>p.w.forEach(k=>cnt[k]=(cnt[k]||0)+1));
-const sur=k=>norm(P[k][0].split(" ").slice(-1)[0]);
-const ca=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a]||sur(a).localeCompare(sur(b)));
-function renderCo(){document.getElementById("coauth").innerHTML=ca.map(k=>{const [n,u]=P[k];
-  const nm=u?`<a class="nm" href="${u}">${esc(n)}</a>`:`<span class="nm">${esc(n)}</span>`;
-  return `<li>${nm}<button type="button" data-n="${esc(n)}">${cnt[k]} ${L(cnt[k]===1?"paper":"papers")}</button></li>`}).join("");
-document.querySelectorAll("#coauth button").forEach(b=>b.onclick=()=>{
-  const q=document.getElementById("q");q.value=b.dataset.n;query=b.dataset.n;filt="all";renderChips();renderPubs();
-  document.getElementById("publications").scrollIntoView()})}
-
-const S=[
- ["lvPhd",[["Porfirio L. León Álvarez","Espacios clasificantes de grupos discretos para la familia de subgrupos virtualmente abelianos","UNAM","2024"]]],
- ["lvMsc",[
-   ["Eduardo Flores Martínez","A Bestvina–Brady type construction for groups with torsion","UNAM","2025"],
-   ["Porfirio L. León Álvarez","El teorema de Eilenberg–Ganea para familias","UNAM","2019"]]],
- ["lvBsc",[
-   ["Alonso García Molina","Las conjeturas de Kaplansky en grupos hiperbólicos","UNAM","2026"],
-   ["Asly Amairani López Poblete","Grupos virtualmente cíclicos","UABJO","2026"],
-   ["Víctor Eduardo San Martín Macías","Grupos de dimensión 1","UNAM","2024"],
-   ["Diana Belén Vizcaíno Torres","El espectro terso de Bowditch y grupos generados por dos elementos","UNAM","2024"],
-   ["Vivian Daniela de León","Una cota para el orden del grupo de isometrías de una superficie hiperbólica","UNAM","2024"],
-   ["Diego Leipen Lara","Invarianza cuasiisométrica de propiedades de finitud","UNAM","2023"],
-   ["Félix Lugo","La obstrucción de finitud de Wall","UNISON","2018"],
-   ["Sandy Guadalupe Aguilar Rojas","El problema de la palabra para grupos de trenzas","UABC","2018"]]]
-];
-function renderSt(){document.getElementById("studs").innerHTML=S.map(([lvl,xs])=>`<div><h3>${L(lvl)} · ${xs.length}</h3><ol>${xs.map(([n,t,u,y])=>
-  `<li><span class="nm">${esc(n)}</span><span class="th">${esc(t)}</span><span class="in">${u} · ${y}</span></li>`).join("")}</ol></div>`).join("")}
-document.getElementById("lang").addEventListener("click",()=>setLang(lang==="en"?"es":"en"));
-let saved=null;try{saved=localStorage.getItem("ljss-lang")}catch(e){}
-setLang(saved||((navigator.language||"").toLowerCase().startsWith("es")?"es":"en"));
-</script>
-
+<script src="assets/site.js"></script>
 </body>
 </html>
