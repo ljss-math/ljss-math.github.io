@@ -151,4 +151,4 @@ function renderSt(){document.getElementById("studs").innerHTML=S.map(([lvl,xs])=
   `<li><span class="nm">${esc(n)}</span><span class="th">${esc(t)}</span><span class="in">${u} · ${y}</span></li>`).join("")}</ol></div>`).join("")}
 document.getElementById("lang").addEventListener("click",()=>setLang(lang==="en"?"es":"en"));
 let saved=null;try{saved=localStorage.getItem("ljss-lang")}catch(e){}
-setLang(saved||((navigator.language||"").toLowerCase().startsWith("es")?"es":"en"));
+setLang(saved||"en");
