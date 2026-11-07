@@ -66,7 +66,7 @@ const pubs=[
  {t:"Finiteness properties and quasi-isometry of group pairs",w:["li"],y:2026,s:"sub",v:"Submitted",ax:"2603.06535"},
  {t:"A note on higher coherence of graphs of groups",w:["li"],y:2025,s:"sub",v:"Submitted",ax:"2511.16409"},
  {t:"A spine for the Teichmüller space of a non-orientable surface with punctures",w:CRP,y:2025,s:"pub",j:"Bull. London Math. Soc.",v:"(2025)",pv:"https://doi.org/10.1112/blms.70228",ax:"2504.05404"},
- {t:"A note on finiteness properties of vertex stabilisers",w:["li"],y:2025,s:"acc",j:"Proc. Amer. Math. Soc.",v:"to appear",ax:"2502.14751"},
+ {t:"A note on finiteness properties of vertex stabilisers",w:["li"],y:2026,s:"pub",j:"Proc. Amer. Math. Soc.",v:"154 (2026), 4587–4595",pv:"https://doi.org/10.1090/proc/17750",ax:"2502.14751"},
  {t:"The proper geometric dimension of the full mapping class group of a punctured orientable surface",w:CRP,y:2025,s:"pub",j:"J. Group Theory",v:"(2025)",pv:"https://doi.org/10.1515/jgth-2024-0227",ax:"2412.14410"},
  {t:"On the K-theory of groups of the form ℤⁿ ⋊ ℤ/m with m square-free",w:["mario"],y:2027,s:"pub",j:"Proc. Amer. Math. Soc.",v:"155 (2027), 127–140",pv:"https://doi.org/10.1090/proc/17848",ax:"2410.09263"},
  {t:"On the dimension of Harer's spine for the decorated Teichmüller space",w:CRP,y:2026,s:"pub",j:"Homology Homotopy Appl.",v:"28 (2026), no. 2, 67–78",pv:"https://intlpress.com/JDetail/2054560156660047874",ax:"2409.04392"},
